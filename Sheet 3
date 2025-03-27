@@ -1,1 +1,15 @@
-fyhnnk
+#1
+A=0
+total_time=0
+number_of_runs=0
+avg=0
+while A<1:
+    time=input("Enter 10 km run time=")
+    if time=="" or int(time)==0: 
+        break
+    number_of_runs+=1
+    total_time+=int(time)
+    avg=float(total_time)/float(number_of_runs)
+    
+print("the average=",avg)
+print("nuber of runs=",number_of_runs)
