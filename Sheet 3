@@ -13,3 +13,71 @@ while A<1:
     
 print("the average=",avg)
 print("nuber of runs=",number_of_runs)
+
+
+#2
+fl_num=1234.5678
+bef_int_num=int( input("enter the num befor digit="))
+aft_int_num=int( input("enter the num after digit="))
+x=(fl_num%(10**(bef_int_num))-fl_num%1)
+a=fl_num%1
+k=fl_num%(1/(10**aft_int_num))
+f=a-k
+c=x+f
+print(c)
+
+#3
+s= "Tom Jerry Herry"
+a=s.split( )
+a.sort()
+c=",".join(a)
+print(c)
+
+#4
+sequence=[10,20,30,40,50,60]
+even_sum=0
+odd_sum=0
+for x in sequence:
+    if x%20==0:
+        even_sum+=x
+    else:
+        odd_sum+=x
+    
+print(even_sum,odd_sum)
+
+
+#5
+USERS={'user1':'password1','user2':'password2'}
+name_input=input("enter the username pls:")
+pass_input=input("enter the password:")
+if name_input in USERS and USERS[name_input]==pass_input:
+    print("username and password are correct")
+else:
+    print("Error, invalid username or password")
+
+#6    
+d1 = {'a': 1}
+d2 = {'a': 2}
+d3 = {'b': 3}
+all_dicts = [d1, d2, d3]
+fin_di= {}
+for a in all_dicts:
+    fin_di.update(a)
+print(fin_di)
+
+
+#7
+numbers1 = [10, 20, 30]
+numbers2 = [10, 20, 30, 10, 20, 30]
+f=0
+h=0
+for a in range(len(numbers1)):
+    if numbers1[a] not in numbers1[a+1:len(numbers1)]:
+        f+=1
+print(f)
+for p in range(len(numbers2)):
+    if numbers2[p] not in numbers2[p+1:len(numbers2)] :
+        h+=1    
+print(h)
+
+
