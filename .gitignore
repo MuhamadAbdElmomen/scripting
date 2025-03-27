@@ -1,1 +1,118 @@
-name = input("Enter your name: ") age = input("Enter your age: ") #2 #3 print(name+" "+age)
+#1
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+print(name+" "+age) 
+
+#2
+
+count = int(input("Enter count: "))
+char = input("Enter character to repeat: ")
+print(char*count)
+#3
+
+file_name = "/home/user/projects/my_project/file.txt"
+N=file_name.split("/")[-1].split(".")[0]
+print("file name",N)
+T=file_name.split(".")[-1]
+print("file type",T)
+#4
+
+my_str = "    hello           world          "
+my_str = my_str.strip()   #hello world
+my_str = my_str.title()   #Hello World
+sub_strs = my_str.split(' ') #Hello, , , , , , , , , ,World
+my_str = sub_strs[0].upper() + ', ' + "python".title() + '!'
+print(my_str) #HELLO, Python!
+#5
+
+s = "Hello world"
+x=s.replace("world", "mohamed")
+print(x)
+#6
+
+s="hello world"
+A=s.index("o")
+print(s.index('o', A + 1))
+#7
+
+s="hello world"
+print(s.index("o"))
+#8
+
+a = 1 / 3
+b = 2 / 3
+print(f"{a:.4f} + {b:.4f} = {a + b:.4f}")
+#0.3333 + 0.6667 =1.0000
+print(f"0.1 + 0.2 = {0.1 + 0.2}")
+#0.1 +0.2 = 0.300000000000000004
+print(chr(72) + chr(111) + chr(119) + chr(33))
+# H + o + w + !
+#How!
+
+#9
+
+s = "Hello world"
+
+print(s[-5:] + ' ' + s[0:5])
+#world Hello
+
+#10
+
+#1
+
+L=list()
+L.append(1)
+L.append(2)
+L.append(3)
+print(L)
+
+#2
+list2=[5,6,7]
+L.extend(list2)
+print(L)
+
+#3
+L.insert(3,4)
+print(L)
+
+#4
+L.remove(L[-1])
+print(L)
+
+#5
+L.remove(6)
+print(L)
+
+#6
+print(L.index(3))
+
+#7
+L.reverse()
+print(L)
+
+#8
+list3=[L[0],L[1],L[2]]
+print(list3)
+
+#9
+lst = [2, 4, 1, 5, -1]
+print(sorted(lst))
+#the changing in the list is temporary
+lst.sort()
+print(lst)
+#the changing in the list is permanent
+
+#10
+lst1 = []
+lst2 = [1,2,3]
+
+lst1.append(lst2.copy())
+lst1.append(lst2.copy())
+lst1.append(lst2.copy())
+#lst1=[[1,2,3],[1,2,3],[1,2,3]]
+lst1[0][0] = 10
+# the wrong is the lst2 not a copy,
+# so the change in any list affects the others lists
+print(lst1)
+#[[10,2,3],[1,2,3],[1,2,3]]
