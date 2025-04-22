@@ -1,0 +1,49 @@
+#1
+import random
+def generate_password(length, chars):
+    pass
+
+generate_password(8, "abcde")
+lst=[]
+for c in range(26):
+    b=chr(c+ord('a'))
+    n=chr(c+ord('A'))
+    m=chr(c+ord('0'))
+    lst.append(b)
+    lst.append(n)
+    lst.append(m)
+a=''.join(lst)
+print(lst)
+z=random.choices(lst,k=10)
+print(z)
+
+#2
+lst=[]
+for c in range(26):
+    b=chr(c+ord('a'))
+    n=chr(c+ord('A'))
+    m=chr(c+ord('0'))
+    lst.append(b)
+    lst.append(n)
+    lst.append(m)
+a=''.join(lst)
+print(lst)
+#3
+names=['mohamed','hossam','youssef']
+s2={letter for name in names for letter in name}
+print(s2)
+#4
+def avgg(*numbers):
+    if not numbers:
+        return 0
+    return (sum(numbers)/len(numbers))
+print(avgg(4,5,6))
+
+#5
+
+def subd(equation,**var):
+    for key,value in var.items():
+        equation=equation.replace(key,str(value))
+    return equation
+l=subd(('a+b=c'), a=4,b=5,c=9)
+print(l)
